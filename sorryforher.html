@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sorry 😭🤍🥺</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&family=Playfair+Display:wght@600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+/* ---------------- GLOBAL STYLING ---------------- */
+body {
+margin: 0;
+padding: 0;
+font-family: 'Fredoka', sans-serif;
+background: linear-gradient(120deg, #ffe1f5, #ffd0e8, #e0d0ff, #fff6fb, #f9e0ff);
+background-size: 600% 600%;
+animation: galaxyGradient 40s ease-in-out infinite alternate;
+overflow-x: hidden;
+color: #4a4a4a;
+-webkit-font-smoothing: antialiased;
+perspective: 900px;
+position: relative;
+}
+
+@keyframes galaxyGradient {
+0% { background-position: 0% 50%; }
+25% { background-position: 50% 25%; }
+50% { background-position: 100% 50%; }
+75% { background-position: 50% 75%; }
+100% { background-position: 0% 50%; }
+}
+
+/* ---------------- STAR FIELD ---------------- */
+body::before {
+content: "";
+position: fixed;
+inset: 0;
+background-image:
+radial-gradient(circle, rgba(255,255,255,0.85) 1.5px, transparent 2px),
+radial-gradient(circle, rgba(255,220,255,0.65) 1.2px, transparent 2px),
+radial-gradient(circle, rgba(255,180,255,0.45) 2px, transparent 3px),
+radial-gradient(circle, rgba(255,255,255,0.12) 3px, transparent 4px),
+linear-gradient(60deg, rgba(255,220,255,0.05), rgba(255,255,255,0.0));
+background-size: 200px 200px, 160px 160px, 220px 220px, 300px 300px, 600px 600px;
+animation: galaxyMove 60s linear infinite;
+opacity: 0.8;
+pointer-events: none;
+z-index: -1;
+}
+
+@keyframes galaxyMove {
+0% { background-position: 0 0, 60px 80px, 130px 50px, 200px 200px, 0 0; }
+100% { background-position: 600px 500px, 380px 420px, 460px 390px, 700px 600px, 1000px 400px; }
+}
+
+/* ---------------- LOVE COUNTER ---------------- */
+.love-counter {
+position: fixed;
+top: 15px;
+left: 50%;
+transform: translateX(-50%);
+background: rgba(255, 255, 255, 0.35);
+padding: 12px 35px;
+border-radius: 35px;
+font-size: 22px;
+font-weight: 600;
+font-family: 'Fredoka', sans-serif;
+backdrop-filter: blur(15px) saturate(1.5);
+box-shadow:
+0 8px 25px rgba(255, 150, 200, 0.35),
+inset 0 0 25px rgba(255, 255, 255, 0.35);
+border: 1.5px solid rgba(255, 255, 255, 0.6);
+color: #d94f87;
+z-index: 9999;
+animation: loveGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes loveGlow {
+0% {
+box-shadow:
+0 8px 25px rgba(255, 120, 160, 0.35),
+inset 0 0 25px rgba(255, 255, 255, 0.3);
+transform: translateX(-50%) scale(1);
+}
+100% {
+box-shadow:
+0 8px 35px rgba(255, 120, 160, 0.55),
+inset 0 0 35px rgba(255, 255, 255, 0.5);
+transform: translateX(-50%) scale(1.05);
+}
+}
+
+/* ---------------- CONTAINER ---------------- */
+.container {
+max-width: 900px;
+margin: 100px auto;
+background: rgba(255, 255, 255, 0.28);
+padding: 60px;
+border-radius: 40px;
+border: 2px solid rgba(255, 255, 255, 0.55);
+backdrop-filter: blur(45px) saturate(2.1);
+box-shadow:
+0 25px 70px rgba(255, 120, 160, 0.35),
+0 0 90px rgba(255, 140, 180, 0.22),
+inset 0 0 90px rgba(255, 255, 255, 0.25);
+animation: elevate 3.6s ease-in-out infinite alternate;
+transform-style: preserve-3d;
+animation-delay: .4s;
+position: relative;
+}
+
+/* Floating box animation */
+@keyframes elevate {
+from { transform: translateY(0) rotateX(0deg); }
+to { transform: translateY(-10px) rotateX(2deg); }
+}
+
+/* ---------------- HEADINGS ---------------- */
+h1 {
+font-family: 'Playfair Display', serif;
+font-size: 58px;
+font-weight: 700;
+text-align: center;
+margin-bottom: 40px;
+letter-spacing: 1px;
+
+/* Elegant gradient with high contrast */
+background: linear-gradient(135deg, #ff7fb8, #ff5a9e);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+/* Subtle glow for readability */
+text-shadow:
+0 2px 4px rgba(255, 120, 160, 0.5),
+0 4px 12px rgba(255, 90, 150, 0.4);
+
+/* Gentle floating animation */
+animation: floatText 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatText {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-6px); }
+100% { transform: translateY(0px); }
+}
+
+
+
+/* Signature */
+.signature {
+font-family: 'Great Vibes', cursive;
+font-size: 37px;
+margin-top: 55px;
+color: #dd68a3;
+text-shadow: 0 3px 10px rgba(255, 150, 190, 0.55);
+animation: fadeIn 2s ease forwards;
+}
+
+/* ---------------- HEART ---------------- */
+.heart {
+font-size: 90px; /* slightly smaller than heading */
+text-align: center;
+display: block;
+margin: 20px auto 40px; /* centers it and adds spacing */
+animation: floatingHeart 2.8s ease-in-out infinite;
+filter: drop-shadow(0 6px 12px rgba(255,150,200,0.5));
+}
+
+/* Floating effect */
+@keyframes floatingHeart {
+0% { transform: translateY(0) scale(1); }
+50% { transform: translateY(-18px) scale(1.1); }
+100% { transform: translateY(0) scale(1); }
+}
+
+
+/* ---------------- POEMS/TEXT ---------------- */
+p, .poem {
+font-size: 20px;
+line-height: 1.85;
+margin: 22px 0;
+}
+
+.poem {
+font-style: italic;
+background: rgba(255,255,255,0.38);
+padding: 24px;
+border-radius: 25px;
+border: 1px solid rgba(255,255,255,0.45);
+box-shadow:
+inset 0 0 60px rgba(255, 255, 255, 0.3),
+0 8px 25px rgba(255, 150, 200, 0.2);
+line-height: 1.9;
+white-space: pre-line;
+animation: fadeIn 1.6s ease forwards;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.button-wrapper {
+display: flex;
+flex-direction: column; /* stack vertically */
+justify-content: center;
+align-items: center;
+gap: 25px; /* spacing between the buttons */
+margin-top: 40px;
+}
+
+button {
+border: none;
+color: white;
+font-size: 20px;
+border-radius: 40px;
+cursor: pointer;
+font-weight: 600;
+padding: 18px 48px;
+transition: all 0.4s ease;
+box-shadow:
+0 12px 35px rgba(255, 120, 160, 0.45),
+inset 0 0 35px rgba(255,255,255,0.4);
+}
+
+button:hover {
+transform: scale(1.18) translateY(-5px) rotate(1deg);
+}
+
+#forgivenBtn {
+background: linear-gradient(135deg, #ff8fc5, #ff6fb0, #ff57a3, #ff9cd7);
+background-size: 300%;
+animation: shimmer 3.5s infinite linear;
+}
+
+@keyframes shimmer {
+0% { background-position: 0% 50%; }
+100% { background-position: 200% 50%; }
+}
+
+#madBtn {
+background: linear-gradient(135deg, #ff6b6b, #ff4747, #ff2f2f);
+animation: pulseRed 3s ease-in-out infinite;
+}
+
+@keyframes pulseRed {
+0% { box-shadow: 0 12px 35px rgba(255, 80, 80, 0.45); }
+50% { box-shadow: 0 12px 50px rgba(255, 60, 60, 0.65); }
+100% { box-shadow: 0 12px 35px rgba(255, 80, 80, 0.45); }
+}
+
+/* ---------------- FLOATING EMOJIS ---------------- */
+.floating-emoji {
+position: absolute;
+font-size: 48px;
+opacity: 0.9;
+animation: floatStar 12s ease-in-out infinite;
+filter: drop-shadow(0 5px 12px rgba(255,200,255,0.4));
+}
+
+@keyframes floatStar {
+0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.9; }
+25% { transform: translateY(-15px) translateX(10px) scale(1.05); opacity: 0.95; }
+50% { transform: translateY(-25px) translateX(-10px) scale(1.1); opacity: 0.85; }
+75% { transform: translateY(-15px) translateX(10px) scale(1.05); opacity: 0.95; }
+100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.9; }
+}
+
+/* ---------------- FADE-IN ---------------- */
+.fade-in {
+opacity: 0;
+animation: fadeIn 1.6s forwards ease;
+}
+.fade-in.delay-1 { animation-delay: .4s; }
+.fade-in.delay-2 { animation-delay: .7s; }
+.fade-in.delay-3 { animation-delay: 1.0s; }
+.fade-in.delay-4 { animation-delay: 1.3s; }
+.fade-in.delay-5 { animation-delay: 1.6s; }
+
+@keyframes fadeIn {
+to { opacity: 1; transform: translateY(0); }
+from { opacity: 0; transform: translateY(15px); }
+}
+
+/* ---------------- CONFETTI ---------------- */
+.confetti {
+position: fixed;
+top: -10px;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+opacity: 0.9;
+animation: fall 2.4s linear forwards;
+}
+
+@keyframes fall {
+100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOVE COUNTER -->
+<div class="love-counter">
+My Love For YOU Counter : <span id="loveCount">0</span> 💗
+</div>
+
+<div class="container fade-in">
+
+<!-- Floating emojis -->
+<div class="floating-emoji" style="top: -20px; left: 20px;">🤍</div>
+<div class="floating-emoji" style="top: -35px; right: 25px; animation-delay: 1.5s;">🥺</div>
+<div class="floating-emoji" style="bottom: -30px; left: 40px; animation-delay: 2.5s;">💗</div>
+<div class="floating-emoji" style="bottom: -35px; right: 40px; animation-delay: 3.2s;">💕</div>
+
+<h1 class="fade-in delay-1"><i><u>My Official Apology Statement To The Prettiest Girl in the Multiverse.</u></i></h1>
+<div class="heart fade-in delay-2">🤍🥺🤍</div>
+
+<p>Look, my love… my Fatiiiii… 😭💕🥺</p>
+
+<p>
+I’ve been sitting here thinking about us, thinking about you, and my heart aches because I know I hurt you.
+If there’s one thing I could never stand in this life, it’s causing you pain. 😭💔
+</p>
+
+<p>
+You mean more to me than words could ever capture. You’re not just someone important to me.
+You’re my calm in the storm, my warmth in the coldest nights, the light my soul reaches for. I promise I'm learning, growing, and trying. You’re the one I always choose… even when I stumble, even when I fail to express it right. 🤍🥺💗
+</p>
+
+<div class="poem">
+✨ A Poem for You, My Fati ; because your beauty deserves poetry ✨
+
+Your smile is sunlight breaking through the gray, ☀️
+Your laugh, a melody that makes the clouds sway. 🎶☁️
+Your eyes are stars the night cannot contain, ✨🌙
+And in your presence, even sorrow feels slain. 💕
+
+Your beauty flows like rivers to the sea, 🌊
+A gentle tide that carries all of me. 🤍
+Your soul’s soft glow paints the darkest skies, 🌌
+And every glance from you is paradise. 😭💗
+
+You are the song the angels forgot to sing, 😇🎵
+The kind of wonder that makes the whole world cling. 💞
+Fati, my love, my heart, my muse, my star, 🌟
+You are the poem that tells me who we are. 💕🥺✨
+
+You’re special. You’re precious.
+You’re my favorite human in the universe 🥺💗🌍
+I never want to see tears in your eyes because of me. 😭🤍
+You deserve softness, patience, and love, and I promise to give you all of it, always. 🤍✨
+</div>
+
+<p>
+So here I am… humble, soft, emotional, and honest…
+apologizing with all my heart. 🤍🥺
+<b>I'm sorry. Like genuinely. Deeply. Entirely. Completely.</b>
+Not the empty kind, but the one that comes from loving you with everything I have. 🤍🔥
+</p>
+
+<div class="poem">
+✨ Another Poetic Paragraph ; because one is not enough for a girl like you ✨
+
+If I could describe your beauty,
+I’d say you’re a poem the universe accidentally wrote too well.
+Every line perfect. ✨
+Every detail intentional. 🤍
+Every curve, every laugh, every expression carved with love. 💕
+</div>
+
+<p>
+You’re the kind of beautiful that isn’t just physical.
+It’s emotional. It’s spiritual. It’s cosmic. 🌌
+You’re the type of beautiful that makes people kinder,
+that inspires softness in others,
+that makes someone like me want to be a better man just to deserve you. 🥺💗
+</p>
+
+<p>
+You’re breathtaking in the quiet ways too…
+the way your voice softens when you care, 🤍
+the way your eyes sparkle when you laugh, ✨
+the way your presence alone feels like home, Because <b>YOU ARE MY HOME</b>. 🏡💕
+</p>
+
+<p>
+You’re not just beautiful.
+You’re beauty itself wearing a human form. 😭🤍
+</p>
+
+<div class="poem">
+So......
+If you’re willing…
+if your heart can give me another chance…
+I want to hold you, love you better, and make your world brighter. 🌟🤍💗
+Just say yes, my Pagli...
+Let us start everything from the beginning...🤍✨🥺💕
+</div>
+
+<div class="button-wrapper">
+<button id="forgivenBtn" onclick="forgive()">
+<span id="forgivenText">Forgive You 😭🤍</span>
+</button>
+<button id="madBtn" onclick="stillMad()">Still Mad 😤</button>
+</div>
+
+<div class="signature fade-in delay-5">
+With all my love,
+<br>Your Adi 🤍🥺
+</div>
+</div>
+
+<script>
+/* ---------------- LOVE COUNTER SCRIPT ---------------- */
+let loveCounter = 0;
+setInterval(() => {
+loveCounter++;
+document.getElementById("loveCount").textContent = loveCounter;
+}, 1);
+
+
+/* ---------------- BUTTON LOGIC ---------------- */
+let madClicks = 0;
+const forgivenTexts = [
+"I Forgive You 😭🤍",
+"Please Forgive Me na Fati? 🥺💗",
+"Pretty Fati Please? 😭🤍✨",
+"I'm Really Sorry goo 🥺💕",
+"Please Please Please? 😭🤍",
+"I'll Do Anything madam 🥺💗✨",
+"Pls Pls Pls Forgive Me? 😭🤍🤍",
+"You're My Favorite Person Ever 🥺💕",
+"Pls Pls Pls Pls I'm Begging 😭🤍✨",
+"I Love You So Much Pretty Girl 🥺💗💗"
+];
+
+function stillMad() {
+madClicks++;
+
+const madBtn = document.getElementById('madBtn');
+const forgivenBtn = document.getElementById('forgivenBtn');
+const forgivenText = document.getElementById('forgivenText');
+
+forgivenBtn.style.transform = `scale(${1 + madClicks * 0.12})`;
+madBtn.style.transform = `scale(${Math.max(0.6, 1 - madClicks * 0.08)})`;
+
+if (madClicks < forgivenTexts.length) {
+forgivenText.textContent = forgivenTexts[madClicks];
+}
+
+if (madClicks >= 6) {
+madBtn.style.opacity = "0";
+madBtn.style.pointerEvents = "none";
+}
+}
+
+/* ---------------- CONFETTI ---------------- */
+function createConfetti() {
+for (let i = 0; i < 35; i++) {
+const c = document.createElement('div');
+c.className = 'confetti';
+c.style.left = Math.random() * window.innerWidth + 'px';
+c.style.background = ['#ff7fb8','#ffb3e6','#ffd1ef','#ff9cd7'][Math.floor(Math.random()*4)];
+document.body.appendChild(c);
+
+setTimeout(() => c.remove(), 2500);
+}
+}
+
+function forgive() {
+createConfetti();
+setTimeout(() => {
+alert('Tumiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii Shotiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii\nAmakeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee Maaaaaaaaaaaaaaaafffffffffffff\nkoreeeeeeeeeeeeeeeeeeeeeeeeee disooooooooooooooooooooooooooooooooo?????????😭😭😭😭😭😭😭😭😭😭😭😭😭\nSS NIYEEEEEEEE AMAKEEEEEEEEEEEEEE DEKHAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO PLSSSSSSSSSSSSSSSSSSSSSSSSSS 🥺🤍');
+}, 350);
+}
+</script>
+
+</body>
+</html>
